@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Baslik:</strong>
+  <%= @haber.baslik %>
+</p>
+
+<p>
+  <strong>Resim:</strong>
+  <%= @haber.resim %>
+</p>
+
+<p>
+  <strong>Govde:</strong>
+  <%= @haber.govde %>
+</p>
+
+<p>
+  <strong>Tiklanma:</strong>
+  <%= @haber.tiklanma %>
+</p>
+
+<%= link_to 'Edit', edit_haber_path(@haber) %> |
+<%= link_to 'Back', habers_path %>

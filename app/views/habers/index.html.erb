@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Habers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Baslik</th>
+      <th>Resim</th>
+      <th>Govde</th>
+      <th>Tiklanma</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @habers.each do |haber| %>
+      <tr>
+        <td><%= haber.baslik %></td>
+        <td><%= haber.resim %></td>
+        <td><%= haber.govde %></td>
+        <td><%= haber.tiklanma %></td>
+        <td><%= link_to 'Show', haber %></td>
+        <td><%= link_to 'Edit', edit_haber_path(haber) %></td>
+        <td><%= link_to 'Destroy', haber, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Haber', new_haber_path %>
